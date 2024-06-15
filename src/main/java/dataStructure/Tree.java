@@ -59,6 +59,10 @@ public class Tree {
         System.out.println(tree.root.left.value);
         System.out.println(tree.root.right.value);
 
+        System.out.println(tree.root.isLeaf());
+        System.out.println(tree.root.right.isLeaf());
+
+
 
     }
 
