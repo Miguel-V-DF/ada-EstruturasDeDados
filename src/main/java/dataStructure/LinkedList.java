@@ -154,6 +154,21 @@ public class LinkedList {
         return true;
     }
 
+    public Node remove(int index) {
+        if (index < 0 || index >= length) return null;
+        if (index == 0) return removeFirst();
+        if (index == length - 1) return removeLast();
+
+        Node prev = get(index - 1);
+        Node temp = prev.next;
+
+        prev.next = temp.next;
+        temp.next = null;
+        length--;
+
+        return temp;
+    }
+
 
 
 
@@ -163,17 +178,16 @@ public class LinkedList {
         list.append("elemento 3");
         list.prepend("elemento 0");
 
+        list.remove(2);
+        list.print();
+
 //        System.out.println(list.get(2).data);
-
-        list.insert(3, "elemento 2.5");
-
+//        list.insert(3, "elemento 2.5");
 //        System.out.println(list.removeLast().data);
 //        System.out.println(list.removeFirst().data);
-        list.print();
-
-        list.set(1, "elemento 0.5");
-        list.print();
-
+//        list.print();
+//        list.set(1, "elemento 0.5");
+//        list.print();
 //        list.getHead();
 //        list.getTail();
 //        list.getLength();
