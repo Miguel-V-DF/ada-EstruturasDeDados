@@ -72,6 +72,18 @@ public class Tree {
         inOrder(node.right);
     }
 
+    public void posOrder() {
+        posOrder(root);
+    }
+
+    private void posOrder(final Node node) {
+        // Left - Right - Root
+        if (node == null) return;
+        posOrder(node.left);
+        posOrder(node.right);
+        System.out.println(node.value);
+    }
+
     public static void main(String[] args) {
         Tree tree = new Tree();
         tree.insert(37);
@@ -84,7 +96,8 @@ public class Tree {
 
         System.out.println("###################");
 //        tree.preOrder();
-        tree.inOrder();
+//        tree.inOrder();
+        tree.posOrder();
         System.out.println("###################");
 
 
