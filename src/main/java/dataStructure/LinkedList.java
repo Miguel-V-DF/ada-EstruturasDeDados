@@ -118,6 +118,17 @@ public class LinkedList {
         return temp;
     }
 
+    public Node get(int index) {
+        if (index < 0 || index >= length) return null;
+        Node temp = head;
+        for(int i = 0; i < index; i++) {
+            temp = temp.next;
+        }
+        return temp;
+    }
+
+
+
 
     public static void main(String[] args) {
         LinkedList list = new LinkedList("elemento 1");
@@ -125,10 +136,11 @@ public class LinkedList {
         list.append("elemento 3");
         list.prepend("elemento 0");
 
-//        System.out.println(list.removeLast().data);
-        System.out.println(list.removeFirst().data);
+        System.out.println(list.get(2).data);
 
-        list.print();
+//        System.out.println(list.removeLast().data);
+//        System.out.println(list.removeFirst().data);
+//        list.print();
 
 //        list.getHead();
 //        list.getTail();
