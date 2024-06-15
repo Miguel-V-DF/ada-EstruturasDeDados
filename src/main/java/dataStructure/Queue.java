@@ -14,6 +14,8 @@ public class Queue {
         Node(int value){
             this.value = value;
         }
+
+        public int getValue() {return this.value;}
     }
 
     public Queue(int value) {
