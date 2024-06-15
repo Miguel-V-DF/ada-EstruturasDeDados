@@ -127,6 +127,15 @@ public class LinkedList {
         return temp;
     }
 
+    public boolean set(int index, String data) {
+        Node temp = get(index);
+        if (temp != null) {
+            temp.data = data;
+            return true;
+        }
+        return false;
+    }
+
     public boolean insert(int index, String data) {
         if (index < 0 || index > length) return false;
         if (index == 0) {
@@ -160,6 +169,9 @@ public class LinkedList {
 
 //        System.out.println(list.removeLast().data);
 //        System.out.println(list.removeFirst().data);
+        list.print();
+
+        list.set(1, "elemento 0.5");
         list.print();
 
 //        list.getHead();
