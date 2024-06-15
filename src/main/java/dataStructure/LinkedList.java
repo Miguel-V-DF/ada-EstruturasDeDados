@@ -156,7 +156,7 @@ public class LinkedList {
 
 //        System.out.println(list.get(2).data);
 
-        list.insert(2, "elemento 2.5");
+        list.insert(3, "elemento 2.5");
 
 //        System.out.println(list.removeLast().data);
 //        System.out.println(list.removeFirst().data);
