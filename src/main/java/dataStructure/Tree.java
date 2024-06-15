@@ -48,19 +48,39 @@ public class Tree {
         }
     }
 
+    public void preOrder() {
+        preOrder(root);
+    }
+
+    private void preOrder(final Node node) {
+        // R - L - R
+        if (node == null) return;
+        System.out.println(node.value);
+        preOrder(node.left);
+        preOrder(node.right);
+    }
+
     public static void main(String[] args) {
-
         Tree tree = new Tree();
-        tree.insert(1);
-        tree.insert(2);
-        tree.insert(3);
+        tree.insert(37);
+        tree.insert(11);
+        tree.insert(66);
+        tree.insert(8);
+        tree.insert(17);
+        tree.insert(42);
+        tree.insert(72);
 
-        System.out.println(tree.root.value);
-        System.out.println(tree.root.left.value);
-        System.out.println(tree.root.right.value);
+        System.out.println("###################");
+        tree.preOrder();
+        System.out.println("###################");
 
-        System.out.println(tree.root.isLeaf());
-        System.out.println(tree.root.right.isLeaf());
+
+
+//        System.out.println(tree.root.value);
+//        System.out.println(tree.root.left.value);
+//        System.out.println(tree.root.right.value);
+//        System.out.println(tree.root.isLeaf());
+//        System.out.println(tree.root.right.isLeaf());
 
 
 
