@@ -8,8 +8,6 @@ public class LinkedList {
 
     private int length;
 
-
-
     class Node {
         String data;
         Node next;
@@ -60,7 +58,6 @@ public class LinkedList {
             temp = temp.next;
         }
         System.out.println("##############################");
-
     }
 
     public void append(String data) {
@@ -93,9 +90,7 @@ public class LinkedList {
             head = null;
             tail = null;
         }
-
         return temp;
-
     }
 
     public void prepend(String data) {
@@ -110,8 +105,18 @@ public class LinkedList {
         length++;
     }
 
-
-
+    public Node removeFirst() {
+        if (length == 0) return null;
+        Node temp = head;
+        head = head.next;
+        temp.next = null;
+        length--;
+        if (length == 0) {
+            head = null;
+            tail = null;
+        }
+        return temp;
+    }
 
 
     public static void main(String[] args) {
@@ -121,13 +126,13 @@ public class LinkedList {
         list.prepend("elemento 0");
 
 //        System.out.println(list.removeLast().data);
-        list.print();
+        System.out.println(list.removeFirst().data);
 
+        list.print();
 
 //        list.getHead();
 //        list.getTail();
 //        list.getLength();
 //        list.print();
     }
-
 }
