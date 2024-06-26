@@ -46,12 +46,12 @@ The repository includes implementations and explanations for the following data 
 ## Contributing
 Contributions are welcome! If you'd like to contribute, please follow these steps:
 
-Fork the repository.
-1- Create a new branch (git checkout -b feature-branch).
-2- Make your changes.
-3- Commit your changes (git commit -m 'Add some feature').
-4- Push to the branch (git push origin feature-branch).
-5- Open a pull request.
+Fork the repository. <br>
+1- Create a new branch (git checkout -b feature-branch). <br>
+2- Make your changes. <br>
+3- Commit your changes (git commit -m 'Add some feature'). <br>
+4- Push to the branch (git push origin feature-branch). <br>
+5- Open a pull request. <br>
 Please ensure your code adheres to the project's coding standards.
 
 
